@@ -53,11 +53,11 @@ h1 { margin: 0 0 1.4rem; font-size: clamp(3.8rem,9vw,7.2rem); font-weight: 500; 
 .publication-list, .teaching-list { list-style: none; margin: 0; padding: 0; }
 .publication-list a { font-weight: 700; }
 .publication-list { counter-reset: publication 25; }
-.publication-list li { position: relative; display: grid; grid-template-columns: 58px 1fr; gap: 1rem; padding: 1.35rem 0; border-top: 1px solid var(--line); }
+.publication-list li { position: relative; display: grid; grid-template-columns: 58px 1fr; gap: 1rem; padding: 1.35rem 0; }
 .publication-list li::before { content: attr(data-number); color: var(--gold); font-family: var(--serif); font-size: 1.05rem; }
 .publication-list p { margin: 0; }
 .publication-list br + em, .publication-list br + strong { color: var(--ink-soft); }
-.teaching-list li { display: grid; grid-template-columns: 120px 1fr; gap: 1.2rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
+.teaching-list li { display: grid; grid-template-columns: 120px 1fr; gap: 1.2rem; padding: 1.15rem 0; }
 .course-code { color: var(--gold); font-weight: 800; }
 .course-sublabel { color: var(--ink-soft); font-size: .82rem; font-weight: 700; letter-spacing: .04em; }
 .item-note { color: var(--ink-soft); }
@@ -74,8 +74,7 @@ h1 { margin: 0 0 1.4rem; font-size: clamp(3.8rem,9vw,7.2rem); font-weight: 500; 
 .country { break-inside: avoid; border-top: 2px solid var(--ink); padding-top: .6rem; }
 .country h2 { margin: 0 0 1rem; font-size: 1.65rem; }
 .rec-list { list-style: none; padding: 0; margin: 0; }
-.rec-list li { padding: .8rem 0; border-top: 1px solid var(--line); }
-.rec-list li:first-child { border-top: 0; }
+.rec-list li { padding: .8rem 0; }
 .rec-list strong { color: var(--ink); }
 .football-card { display: grid; place-items: center; min-height: 540px; margin-bottom: 5rem; border: 1px solid var(--line); background: var(--white); text-align: center; }
 .football-card img { max-height: 390px; width: auto; margin: auto; }
