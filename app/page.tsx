@@ -21,7 +21,7 @@ export default function Home() {
         <section className="section" id="research">
           <div className="section-heading">
             <p className="eyebrow">In progress</p>
-            <div><h2>Current research</h2><p className="section-note">Work on elections, democratic accountability, parties, and political institutions.</p></div>
+            <div><h2>Current research</h2></div>
           </div>
           <ol className="publication-list">
             {academic.currentResearch.map((item, index) => <li key={index} data-number={String(academic.currentResearch.length - index).padStart(2,"0")}><p><RichText html={item.html} /></p></li>)}
@@ -30,8 +30,8 @@ export default function Home() {
 
         <section className="section" id="publications">
           <div className="section-heading">
-            <p className="eyebrow">Selected record</p>
-            <div><h2>Publications</h2><p className="section-note">Published and forthcoming work, with papers and supplements linked when available.</p></div>
+            <p className="eyebrow">Full list</p>
+            <div><h2>Publications</h2></div>
           </div>
           <ol className="publication-list">
             {academic.publications.map((item) => <li key={item.number} data-number={String(item.number).padStart(2,"0")}><p><RichText html={item.html.replace(/^\[\d+\.\]\s*/, "")} /></p></li>)}
@@ -41,15 +41,32 @@ export default function Home() {
         <section className="section" id="teaching">
           <div className="section-heading">
             <p className="eyebrow">Columbia</p>
-            <div><h2>Teaching</h2><p className="section-note">Graduate formal theory and undergraduate political economy.</p></div>
+            <div><h2>Teaching</h2></div>
           </div>
           <ul className="teaching-list">
             {academic.teaching.map((item, index) => {
-              const code = item.text.split(" ").slice(0,2).join(" ");
-              return <li key={index}><span className="course-code">{code}</span><span><RichText html={item.html.replace(code, "")} /></span></li>;
+              const course = [
+                { label: "POLS GR8211", remove: "POLS GR8211" },
+                { label: "POLS W4732", remove: "POLS W4732" },
+                { label: "ECPS 4921", sublabel: "Seminar", remove: "ECPS4921 Seminar" },
+              ][index]!;
+              return <li key={index}>
+                <span className="course-code">{course.label}{course.sublabel && <><br /><span className="course-sublabel">{course.sublabel}</span></>}</span>
+                <span><RichText html={item.html.replace(course.remove, "").replace(/(<br>)+$/, "")} /></span>
+              </li>;
             })}
           </ul>
-          <p><RichText html={academic.otherWriting.html} /></p>
+        </section>
+
+        <section className="section" id="other-writing">
+          <div className="section-heading">
+            <p className="eyebrow">Essays & translations</p>
+            <div><h2>Other writing</h2></div>
+          </div>
+          <ol className="publication-list">
+            <li data-number="02"><p><RichText html={academic.otherWriting.html} /></p></li>
+            <li data-number="01"><p>La Democrazia: Breve Saggio di Adam Przeworski <span className="item-note">[Italian translation]</span></p></li>
+          </ol>
         </section>
       </div>
     </main>
