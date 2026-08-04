@@ -48,10 +48,10 @@ export default function Home() {
               const course = [
                 { label: "POLS GR8211", remove: "POLS GR8211" },
                 { label: "POLS W4732", remove: "POLS W4732" },
-                { label: "ECPS 4921", sublabel: "Seminar", remove: "ECPS4921 Seminar" },
+                { label: "ECPS 4921", remove: "ECPS4921 Seminar" },
               ][index]!;
               return <li key={index}>
-                <span className="course-code">{course.label}{course.sublabel && <><br /><span className="course-sublabel">{course.sublabel}</span></>}</span>
+                <span className="course-code">{course.label}</span>
                 <span><RichText html={item.html.replace(course.remove, "").replace(/(<br>)+$/, "")} /></span>
               </li>;
             })}
