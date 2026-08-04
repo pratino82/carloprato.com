@@ -64,7 +64,9 @@ export default function Home() {
             <div><h2>Other writing</h2></div>
           </div>
           <ol className="publication-list">
-            <li data-number="02"><p><RichText html={academic.otherWriting.html} /></p></li>
+            <li data-number="04"><p><RichText html={academic.otherWriting.html} /></p></li>
+            <li data-number="03"><p><a href="https://effectivegov.uchicago.edu/primers/proportional-representation" target="_blank" rel="noopener">Proportional Representation</a></p></li>
+            <li data-number="02"><p><a href="https://www.mathematica.org/publications/a-head-to-head-comparison-of-alternative-voting-rules" target="_blank" rel="noopener">A Head-to-Head Comparison of Alternative Voting Rules</a></p></li>
             <li data-number="01"><p><a href="https://www.dropbox.com/scl/fi/04b5k0vj4up01k35a294u/Adam-S.pdf?rlkey=sh51sp9398obv63gintt4ourj&dl=0" target="_blank" rel="noopener">La Democrazia: Breve Saggio di Adam Przeworski</a> <span className="item-note">[Italian translation]</span></p></li>
           </ol>
         </section>
