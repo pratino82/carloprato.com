@@ -15,7 +15,8 @@ export function Header() {
           <Link href="/#teaching">Teaching</Link>
           <Link href="/bio/">Bio</Link>
           <Link href="/recs/">Recs</Link>
-          <a className="nav-cv" href={CV_URL} target="_blank" rel="noopener">CV</a>
+          <a className="nav-action" href="mailto:cp2928@columbia.edu">Email me</a>
+          <a className="nav-action" href={CV_URL} target="_blank" rel="noopener">CV</a>
         </nav>
       </div>
     </header>
