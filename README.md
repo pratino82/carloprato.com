@@ -16,7 +16,7 @@ The `html` fields in `data/site-content.json` may contain normal inline HTML suc
 Open PowerShell in this folder and run:
 
 ```powershell
-cd "C:\Users\pratino\Dropbox\POLSW4732\2026 Course\Personal Website"
+cd "C:\Users\pratino\Documents\Codex\GPT Repository\carlo_codex_workspace\Personal Website"
 npm.cmd install
 npm.cmd run dev
 ```
